@@ -1,6 +1,11 @@
-// src/models/solarData.ts
+
 export interface SolarData {
-    id: string;
-    energyProduced: string; // Energy produced in kWh
-    timestamp: string; // ISO date string
+    panel_id: string;
+    timestamp: string;
+    metrics: {
+      temperature: number;
+      voltage: number;
+      current: number;
+      power_output: number;
+    };
   }
